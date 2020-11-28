@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="SortNames">
+  <ClassDiagramComponents>
+    <Class name="Ejecutar" package="Applicacion" visibility="public" xPosition="24.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Lector" package="Modelo" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombres" type="List" visibility="private"/>
+        <Field name="ruta" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List" name="nombres"/>
+          <Argument type="String" name="ruta"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombres" returnType="List" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="List" name="nombres"/>
+        </Method>
+        <Method name="getRuta" returnType="String" visibility="public"/>
+        <Method name="setRuta" returnType="void" visibility="public">
+          <Argument type="String" name="ruta"/>
+        </Method>
+        <Method name="LeerTxt" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Ortografo" package="Modelo" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields>
+        <Field name="nombres" type="List" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="List" name="nombres"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getNombres" returnType="List" visibility="public"/>
+        <Method name="setNombres" returnType="void" visibility="public">
+          <Argument type="List" name="nombres"/>
+        </Method>
+        <Method name="Ordenar" returnType="void" visibility="public"/>
+        <Method name="PonerMayusculas" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

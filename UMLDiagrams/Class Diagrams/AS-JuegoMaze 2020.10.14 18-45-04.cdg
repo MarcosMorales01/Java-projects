@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="AS-JuegoMaze">
+  <ClassDiagramComponents>
+    <Class name="FileLoader" package="Principal" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="exitXCord" type="int" visibility="private"/>
+        <Field name="exitYCord" type="int" visibility="private"/>
+        <Field name="GameMatrix" type="String[][]" visibility="private"/>
+        <Field name="column" type="int" visibility="private"/>
+        <Field name="row" type="int" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="loadFile" returnType="void" visibility="public">
+          <Argument type="String" name="fileName"/>
+        </Method>
+        <Method name="MatrixLoader" returnType="void" visibility="public">
+          <Argument type="String" name="fileTextLine"/>
+          <Argument type="int" name="lineNum"/>
+        </Method>
+        <Method name="getGameMatrix" returnType="String[][]" visibility="public"/>
+        <Method name="getMatrixSizeColumn" returnType="//regresa la matrixsize-column int" visibility="public"/>
+        <Method name="getMatrixSizeRow" returnType="//regresa la matrix size-row int" visibility="public"/>
+        <Method name="ExitXCord" returnType="//regresa las coordenadas X para la salida (Exit) int" visibility="public"/>
+        <Method name="ExitYCord" returnType="//regresa las coordenadas Y para el Exit int" visibility="public"/>
+        <Method name="dimondCount" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="GameGui" package="Principal" visibility="public" xPosition="93.0" yPosition="647.0">
+      <Fields>
+        <Field name="updateCursorAction" type="Action" visibility="package"/>
+        <Field name="hs" type="HighScore" visibility="private"/>
+        <Field name="catFileName" type="int" visibility="private"/>
+        <Field name="cp" type="Container" visibility="private"/>
+        <Field name="fl" type="FileLoader" visibility="private"/>
+        <Field name="menuBar" type="JMenuBar" visibility="private"/>
+        <Field name="newMenu" type="JMenu" visibility="private"/>
+        <Field name="itemExit" type="JMenuItem" visibility="private"/>
+        <Field name="newGameItem" type="JMenuItem" visibility="private"/>
+        <Field name="openFileItem" type="JMenuItem" visibility="private"/>
+        <Field name="itemEnterName" type="JMenuItem" visibility="private"/>
+        <Field name="itemHighScore" type="JMenuItem" visibility="private"/>
+        <Field name="itemSaveScore" type="JMenuItem" visibility="private"/>
+        <Field name="shagLabel" type="JLabel" visibility="private"/>
+        <Field name="ix" type="int" visibility="private"/>
+        <Field name="jx" type="int" visibility="private"/>
+        <Field name="timeLeft" type="int" visibility="private"/>
+        <Field name="progBarPanel" type="JPanel" visibility="private"/>
+        <Field name="labelMatrix" type="JLabel[][]" visibility="private"/>
+        <Field name="timeCalc" type="TimeCalculator" visibility="private"/>
+        <Field name="progressBar" type="JProgressBar" visibility="private"/>
+        <Field name="mo" type="mazeObject" visibility="private"/>
+        <Field name="newPanel" type="JPanel" visibility="private"/>
+        <Field name="theArc" type="TheArchitect" visibility="private"/>
+        <Field name="scrapMatrix" type="String[][]" visibility="private"/>
+        <Field name="timely" type="Timer" visibility="private"/>
+        <Field name="tk" type="TimeKeeper" visibility="private"/>
+        <Field name="playerName" type="String" visibility="private"/>
+        <Field name="levelNum" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+        <Method name="loadMatrixGui" returnType="void" visibility="public">
+          <Argument type="String" name="event"/>
+        </Method>
+        <Method name="nextLevelLoad" returnType="void" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="HighScore" package="Principal" visibility="public" xPosition="300.0" yPosition="414.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="addHighScore" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+          <Argument type="int" name="min"/>
+          <Argument type="int" name="sec"/>
+          <Argument type="int" name="level"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ScoreGui" package="Principal" visibility="public" xPosition="661.0" yPosition="173.0">
+      <Fields>
+        <Field name="mainLabel" type="JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="ScoreGui" returnType="//the ScoreGui Method displays the scores in order from lowest to highest. void" visibility="public"/>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="TheArchitect" package="Principal" visibility="public" xPosition="791.0" yPosition="837.0">
+      <Fields>
+        <Field name="foundPlayer" type="int" visibility="package"/>
+        <Field name="updatedMatrix" type="String[][]" visibility="package"/>
+        <Field name="WallXCord" type="int" visibility="package"/>
+        <Field name="WallYCord" type="int" visibility="package"/>
+        <Field name="collected" type="int" visibility="package"/>
+        <Field name="level" type="boolean" visibility="package"/>
+        <Field name="globalTotalDimonds" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="setExit" returnType="//registra la ubicaciÃ³n de la salida para que podamos mostrarla cuando sea el momento void" visibility="public">
+          <Argument type="int" name="x"/>
+          <Argument type="int" name="y"/>
+        </Method>
+        <Method name="showWall" returnType="//se usa cuando llega el momento de mostrar la salida.   void" visibility="public"/>
+        <Method name="playerMove" returnType="void" visibility="public">
+          <Argument type="int" name="xScale"/>
+          <Argument type="int" name="yScale"/>
+          <Argument type="String[][]" name="currentMatrix"/>
+          <Argument type="int" name="totalDimonds"/>
+        </Method>
+        <Method name="nextLevel" returnType="//cierto, pasamos al siguiente nivel, falso, actualizamos los niveles actuales de la interfaz grÃ¡fica de usuario. void" visibility="public">
+          <Argument type="boolean" name="tOrF"/>
+        </Method>
+        <Method name="getLevel" returnType="//Nivel de retorno verdadero o falso boolean" visibility="public"/>
+        <Method name="getDimondsLeft" returnType="int" visibility="public"/>
+        <Method name="getUpdatedMatrix" returnType="//devuelve la matriz actualizada para que la interfaz grÃ¡fica de usuario la muestre String[][]" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TimeCalculator" package="Principal" visibility="public" xPosition="539.0" yPosition="582.0">
+      <Fields>
+        <Field name="minutes" type="int" visibility="package"/>
+        <Field name="seconds" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="calcTimeforMaze" returnType="//algÃºn tipo de mÃ©todo que determina el tiempo que un jugador tiene para cada nivel segÃºn el tamaÃ±o del nivel y los diamantes. void" visibility="public">
+          <Argument type="int" name="totalDimonds"/>
+          <Argument type="int" name="xSize"/>
+          <Argument type="int" name="ySize"/>
+        </Method>
+        <Method name="getMinutes" returnType="int" visibility="public"/>
+        <Method name="getSeconds" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="TimeKeeper" package="Principal" visibility="public" xPosition="483.0" yPosition="1260.0">
+      <Fields>
+        <Field name="minutes" type="int" visibility="package"/>
+        <Field name="seconds" type="int" visibility="package"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="TimeKeeper" returnType="//una clase para realizar un seguimiento del total de segundos y minutos que el jugador ha utilizado para llegar a un nivel void" visibility="public">
+          <Argument type="int" name="min"/>
+          <Argument type="int" name="sec"/>
+        </Method>
+        <Method name="getMinutes" returnType="int" visibility="public"/>
+        <Method name="getSeconds" returnType="int" visibility="public"/>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="hs" source="Principal.GameGui" target="Principal.HighScore" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="theArc" source="Principal.GameGui" target="Principal.TheArchitect" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="tk" source="Principal.GameGui" target="Principal.TimeKeeper" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="timeCalc" source="Principal.GameGui" target="Principal.TimeCalculator" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="fl" source="Principal.GameGui" target="Principal.FileLoader" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Principal.ScoreGui" target="Principal.ScoreGui" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

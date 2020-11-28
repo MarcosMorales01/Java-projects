@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="Principal">
+  <ClassDiagramComponents>
+    <Class name="Device" package="" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="IDDevice" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="brand" type="String" visibility="private"/>
+        <Field name="model" type="String" visibility="private"/>
+        <Field name="status" type="boolean" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="IDDevice"/>
+          <Argument type="String" name="name"/>
+          <Argument type="String" name="brand"/>
+          <Argument type="String" name="model"/>
+          <Argument type="boolean" name="status"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="getBrand" returnType="String" visibility="public"/>
+        <Method name="setBrand" returnType="void" visibility="public">
+          <Argument type="String" name="brand"/>
+        </Method>
+        <Method name="getModel" returnType="String" visibility="public"/>
+        <Method name="setModel" returnType="void" visibility="public">
+          <Argument type="String" name="model"/>
+        </Method>
+        <Method name="isStatus" returnType="boolean" visibility="public"/>
+        <Method name="setStatus" returnType="void" visibility="public">
+          <Argument type="boolean" name="status"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+        <Method name="toggleDevice" returnType="boolean" visibility="public"/>
+        <Method name="switchOffDevice" returnType="boolean" visibility="public"/>
+        <Method name="switchOnDevice" returnType="boolean" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="DeviceParsing" package="" visibility="public" xPosition="151.0" yPosition="611.0">
+      <Fields>
+        <Field name="devices" type="ArrayList&lt;Device&gt;" visibility="package"/>
+        <Field name="content" type="String" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getString" returnType="void" visibility="public"/>
+        <Method name="parsingContent" returnType="String[]" visibility="public"/>
+        <Method name="setDevices" returnType="void" visibility="public">
+          <Argument type="String[]" name="parsing"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="ar"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="FileReader" package="" visibility="public" xPosition="1504.0" yPosition="597.0">
+      <Fields>
+        <Field name="file" type="Scanner" visibility="package"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="path"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getContentFile" returnType="String" visibility="public"/>
+        <Method name="closeFile" returnType="void" visibility="public"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="ar"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="House" package="" visibility="public" xPosition="493.0" yPosition="558.0">
+      <Fields>
+        <Field name="levels" type="ArrayList&lt;Level&gt;" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;Level&gt;" name="levels"/>
+          <Argument type="String" name="name"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addLevel" returnType="void" visibility="public">
+          <Argument type="Level" name="level"/>
+        </Method>
+        <Method name="getLevelCounter" returnType="int" visibility="public">
+          <Argument type="ArrayList&lt;Level&gt;" name="levels"/>
+        </Method>
+        <Method name="searchLevel" returnType="int" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="countDevicesOn" returnType="int" visibility="public"/>
+        <Method name="countSpecificDevice" returnType="int" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="toogleSpecificDeviceLevel" returnType="boolean" visibility="public">
+          <Argument type="String" name="level"/>
+          <Argument type="String" name="device"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Level" package="" visibility="public" xPosition="906.0" yPosition="426.0">
+      <Fields>
+        <Field name="name" type="String" visibility="private"/>
+        <Field name="IDLevel" type="String" visibility="private"/>
+        <Field name="rooms" type="ArrayList&lt;Room&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="IDLevel"/>
+          <Argument type="String" name="name"/>
+          <Argument type="ArrayList&lt;Room&gt;" name="rooms"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getCounterRooms" returnType="int" visibility="public">
+          <Argument type="ArrayList&lt;Room&gt;" name="rooms"/>
+        </Method>
+        <Method name="addRoom" returnType="void" visibility="public">
+          <Argument type="Room" name="room"/>
+        </Method>
+        <Method name="getRoomCounter" returnType="int" visibility="public"/>
+        <Method name="getRooms" returnType="ArrayList&lt;Room&gt;" visibility="public"/>
+        <Method name="setRooms" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;Room&gt;" name="rooms"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="searchRoom" returnType="int" visibility="public">
+          <Argument type="Room" name="otherRoom"/>
+        </Method>
+        <Method name="RemoveRoom" returnType="boolean" visibility="public">
+          <Argument type="Room" name="room"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="switchAllOffRooms" returnType="boolean" visibility="public"/>
+        <Method name="switchAllOnRooms" returnType="boolean" visibility="public"/>
+        <Method name="switchOnRoom" returnType="boolean" visibility="public">
+          <Argument type="Room" name="room"/>
+        </Method>
+        <Method name="switchOffRoom" returnType="boolean" visibility="public">
+          <Argument type="Room" name="room"/>
+        </Method>
+        <Method name="levelSwitchOffDevice" returnType="boolean" visibility="public">
+          <Argument type="Room" name="room"/>
+          <Argument type="Device" name="device"/>
+        </Method>
+        <Method name="levelSwitchOnDevice" returnType="boolean" visibility="public">
+          <Argument type="Room" name="room"/>
+          <Argument type="Device" name="device"/>
+        </Method>
+        <Method name="switchAllOffSameDevices" returnType="void" visibility="public">
+          <Argument type="String" name="nameDevices"/>
+        </Method>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Main" package="" visibility="public" xPosition="579.0" yPosition="376.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="ar"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Room" package="" visibility="public" xPosition="1298.0" yPosition="20.0">
+      <Fields>
+        <Field name="devices" type="ArrayList&lt;Device&gt;" visibility="private"/>
+        <Field name="IDRoom" type="String" visibility="private"/>
+        <Field name="name" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="IDRoom"/>
+          <Argument type="String" name="name"/>
+          <Argument type="ArrayList&lt;Device&gt;" name="devices"/>
+        </Constructor>
+        <Constructor visibility="public">
+          <Argument type="String" name="name"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="addDevice" returnType="void" visibility="public">
+          <Argument type="Device" name="device"/>
+        </Method>
+        <Method name="getDevices" returnType="ArrayList&lt;Device&gt;" visibility="public"/>
+        <Method name="setDevices" returnType="void" visibility="public">
+          <Argument type="Device[]" name="devices"/>
+        </Method>
+        <Method name="getName" returnType="String" visibility="public"/>
+        <Method name="setName" returnType="void" visibility="public">
+          <Argument type="String" name="name"/>
+        </Method>
+        <Method name="toString" returnType="String" visibility="public"/>
+        <Method name="getDeviceCounter" returnType="int" visibility="public"/>
+        <Method name="searchDevice" returnType="int" visibility="public">
+          <Argument type="Device" name="otherDevice"/>
+        </Method>
+        <Method name="removeDevice" returnType="boolean" visibility="public">
+          <Argument type="Device" name="device"/>
+        </Method>
+        <Method name="switchOffAllDevices" returnType="void" visibility="public"/>
+        <Method name="switchOnAllDevices" returnType="void" visibility="public"/>
+        <Method name="equals" returnType="boolean" visibility="public">
+          <Argument type="Object" name="obj"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="devices" source="DeviceParsing" target="Device" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Device&gt;"/>
+    <UseRelation source="House" target="Level" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="Room" target="Device" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="levels" source="House" target="Level" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Level&gt;"/>
+    <UseRelation source="Level" target="Room" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="devices" source="Room" target="Device" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Device&gt;"/>
+    <HasRelation name="rooms" source="Level" target="Room" type="Aggregation" sourceCardinality="1..1" targetCardinality="0..*" collectionType="ArrayList&lt;Room&gt;"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

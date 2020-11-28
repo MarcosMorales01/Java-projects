@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="DS-CalificacionesAlumnos">
+  <ClassDiagramComponents>
+    <Class name="Alumno" package="Dominio" visibility="public" xPosition="20.0" yPosition="20.0">
+      <Fields>
+        <Field name="infoAlumno" type="ArrayList&lt;String[]&gt;" visibility="private"/>
+        <Field name="calificaciones" type="ArrayList&lt;String[]&gt;" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="ArrayList&lt;String[]&gt;" name="informacion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="imprimirInfoAlumnos" returnType="void" visibility="public"/>
+        <Method name="calificarAlumno" returnType="void" visibility="public"/>
+        <Method name="getInfoAlumno" returnType="ArrayList&lt;String[]&gt;" visibility="public"/>
+        <Method name="setInfoAlumno" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String[]&gt;" name="infoAlumno"/>
+        </Method>
+        <Method name="getCalificaciones" returnType="ArrayList&lt;String[]&gt;" visibility="public"/>
+        <Method name="setCalificaciones" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String[]&gt;" name="calificaciones"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Archivo" package="Dominio" visibility="public" xPosition="320.0" yPosition="20.0">
+      <Fields>
+        <Field name="informacion" type="ArrayList&lt;String[]&gt;" visibility="private"/>
+        <Field name="ruta" type="String" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="getInformacion" returnType="ArrayList&lt;String[]&gt;" visibility="public"/>
+        <Method name="setInformacion" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String[]&gt;" name="informacion"/>
+        </Method>
+        <Method name="leerArchivo" returnType="void" visibility="public"/>
+        <Method name="imprimirDatosDelArchivo" returnType="void" visibility="public"/>
+        <Method name="generarArchivo" returnType="void" visibility="public">
+          <Argument type="ArrayList&lt;String[]&gt;" name="calificaciones"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Principal" package="Principal" visibility="public" xPosition="620.0" yPosition="20.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations/>
+</ClassDiagram>

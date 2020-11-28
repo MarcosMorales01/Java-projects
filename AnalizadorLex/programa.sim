@@ -1,0 +1,15 @@
+IDS
+factorial, ID1
+VarX, ID2
+VarY, ID3
+Num, ID4
+
+TXT
+"ESMAYORX", TX1
+"Factorialde", TX2
+"es", TX3
+
+VAL
+0x1, 1
+0x0, 0
+

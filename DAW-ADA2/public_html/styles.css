@@ -1,0 +1,144 @@
+/* INTEGRANTES
+*José Marcos Morales Gómez
+*Javier Chi Ortiz
+
+*/
+#cajaContenedora {
+    background-color: white;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+#cajaEncabezado {
+    background-color: white;
+    width: 100%;
+    border: 2px solid black;
+    float: left;
+}
+
+#tituloEncabezado {
+    width: 70%;
+    float: left;
+    margin-left: 15px;
+}
+
+#formDeEncabezado {
+    width: 20%;
+    float: right;
+    margin-top: 20px;
+}
+
+#cajaSubEncabezado {
+    background-color: white;
+    width: 100%;
+    border: 2px solid black;
+}
+
+#cajaMenu {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+    width: 100%;
+    float: left;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+}
+
+#miFormulario {
+    margin-left: 20px;
+    margin-top: 15px;
+}
+
+#cajaMenu button{
+    margin: 1px 1px 1px 5px;
+    height: 20px;
+    width: 30px;
+}
+
+.columnaUno { 
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 15%;
+    border-width: medium;
+    border-style: groove;
+    float: left;
+}
+
+.columnaDos {
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 70%;
+    border-width: medium;
+    border-style: groove;
+    float: left;
+    padding-bottom: 9%;
+}
+
+.columnaTres {
+    background-color: white;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    width: 11%;
+    border-width: medium;
+    border-style: groove;
+    float: left;
+    padding-bottom: 4%;
+}
+
+#imagenYlink{
+    float: left;
+}
+
+#formatoImg {
+    width: 130px;
+    height: 160px;
+    float: left;
+}
+
+#informacion {
+    padding-left: 8px;
+    margin-bottom: 2px;
+}
+
+.pieDePagina {
+    display: inline-block;
+    list-style: none;
+    margin-top: 50px;
+    width: 100%;
+    border: 2px solid black;
+    clear: both;
+    line-height: 30px;
+}
+
+.pieDePagina li{
+    margin-left: 5px;
+    float: left;
+}
+
+.pieDePagina label{
+    margin-right: 3px;
+}
+
+h3 {
+    margin-left: 5px; 
+    margin-top: 2%;
+}
+
+div[class="col"] {
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+    border: 2px solid gray;
+}
+div[class="col-7"] {
+    border: 2px solid gray;
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-right: 5px;
+}

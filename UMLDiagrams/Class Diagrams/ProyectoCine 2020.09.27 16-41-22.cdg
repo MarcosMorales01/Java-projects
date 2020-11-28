@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ProyectoCine">
+  <ClassDiagramComponents>
+    <Class name="ControlAgregarFuncion" package="com.cine.control" visibility="public" xPosition="131.0" yPosition="1281.0">
+      <Fields>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+        <Field name="vaf" type="VistaAgregarFuncion" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="VistaMenu" name="vm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlAgregarPelicula" package="com.cine.control" visibility="public" xPosition="1067.0" yPosition="1208.0">
+      <Fields>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vap" type="VistaAgregarPelicula" visibility="private"/>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="VistaMenu" name="vm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlCartelera" package="com.cine.control" visibility="public" xPosition="784.0" yPosition="1126.0">
+      <Fields>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vc" type="VistaCartelera" visibility="private"/>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="VistaMenu" name="vm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlEliminarFuncion" package="com.cine.control" visibility="public" xPosition="2012.0" yPosition="618.0">
+      <Fields>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vef" type="VistaEliminarFuncion" visibility="public"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="VistaMenu" name="vm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlEliminarPelicula" package="com.cine.control" visibility="public" xPosition="1528.0" yPosition="1785.0">
+      <Fields>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vep" type="VistaEliminarPelicula" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="VistaMenu" name="vm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlMenu" package="com.cine.control" visibility="public" xPosition="1408.0" yPosition="2203.0">
+      <Fields>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlSala" package="com.cine.control" visibility="public" xPosition="3237.0" yPosition="75.0">
+      <Fields>
+        <Field name="imOcupado" type="ImageIcon" visibility="private" isStatic="true"/>
+        <Field name="imLibre" type="ImageIcon" visibility="private" isStatic="true"/>
+        <Field name="imSelected" type="ImageIcon" visibility="private" isStatic="true"/>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vs" type="VistaSala" visibility="private"/>
+        <Field name="numAsientos" type="int" visibility="private"/>
+        <Field name="selecionados" type="String" visibility="private"/>
+        <Field name="contAsig" type="int" visibility="private"/>
+        <Field name="funcIndex" type="int" visibility="private"/>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+        <Field name="vp" type="VistaPeliculas" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="int" name="funcIndex"/>
+          <Argument type="VistaMenu" name="vm"/>
+          <Argument type="VistaPeliculas" name="vp"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlTicket" package="com.cine.control" visibility="public" xPosition="3442.0" yPosition="2232.0">
+      <Fields>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+        <Field name="vp" type="VistaPeliculas" visibility="private"/>
+        <Field name="vs" type="VistaSala" visibility="private"/>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vt" type="VistaTicket" visibility="private"/>
+        <Field name="ocupados" type="String" visibility="private"/>
+        <Field name="funcIndex" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="VistaMenu" name="vm"/>
+          <Argument type="VistaPeliculas" name="vp"/>
+          <Argument type="VistaSala" name="vs"/>
+          <Argument type="String[]" name="ocupados"/>
+          <Argument type="int" name="index"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="ControlVPelicula" package="com.cine.control" visibility="public" xPosition="493.0" yPosition="1281.0">
+      <Fields>
+        <Field name="c" type="Cine" visibility="private"/>
+        <Field name="vp" type="VistaPeliculas" visibility="private"/>
+        <Field name="funcDePelicula" type="int[]" visibility="private"/>
+        <Field name="vm" type="VistaMenu" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Cine" name="c"/>
+          <Argument type="VistaMenu" name="vm"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="actionPerformed" returnType="void" visibility="public">
+          <Argument type="ActionEvent" name="e"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Asiento" package="com.cine.modelo" visibility="public" xPosition="4614.0" yPosition="2971.0">
+      <Fields>
+        <Field name="id" type="String" visibility="private"/>
+        <Field name="estado" type="String" visibility="private"/>
+      </Fields>
+      <Constructors/>
+      <Methods>
+        <Method name="getId" returnType="String" visibility="public"/>
+        <Method name="getEstado" returnType="String" visibility="public"/>
+        <Method name="setId" returnType="void" visibility="public">
+          <Argument type="String" name="id"/>
+        </Method>
+        <Method name="setEstado" returnType="void" visibility="public">
+          <Argument type="String" name="estado"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Cine" package="com.cine.modelo" visibility="public" xPosition="167.0" yPosition="2116.0">
+      <Fields>
+        <Field name="numSalas" type="int" visibility="private"/>
+        <Field name="funciones" type="Funcion[]" visibility="private"/>
+        <Field name="peliculas" type="Pelicula[]" visibility="private"/>
+        <Field name="contPeliculas" type="int" visibility="private"/>
+        <Field name="contFunciones" type="int" visibility="private"/>
+        <Field name="numMaxPeliculas" type="int" visibility="private"/>
+        <Field name="numMaxFunciones" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="int" name="numSalas"/>
+          <Argument type="int" name="numMaxPeliculas"/>
+          <Argument type="int" name="numMaxFunciones"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="agregarPelicula" returnType="void" visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="duracion"/>
+        </Method>
+        <Method name="agregarFuncion" returnType="void" visibility="public">
+          <Argument type="String" name="nombrePelicula"/>
+          <Argument type="int" name="numSala"/>
+          <Argument type="int" name="hora"/>
+          <Argument type="int" name="minuto"/>
+          <Argument type="String" name="tipoDeFuncion"/>
+        </Method>
+        <Method name="eliminarFunciones" returnType="void" visibility="public"/>
+        <Method name="getNumMaxPeliculas" returnType="int" visibility="public"/>
+        <Method name="getNumMaxFunciones" returnType="int" visibility="public"/>
+        <Method name="setContPeliculas" returnType="void" visibility="public">
+          <Argument type="int" name="contPeliculas"/>
+        </Method>
+        <Method name="setContFunciones" returnType="void" visibility="public">
+          <Argument type="int" name="contFunciones"/>
+        </Method>
+        <Method name="eliminarPeliculas" returnType="void" visibility="public"/>
+        <Method name="getNumSalas" returnType="int" visibility="public"/>
+        <Method name="getContPeliculas" returnType="int" visibility="public"/>
+        <Method name="getContFunciones" returnType="int" visibility="public"/>
+        <Method name="getPelicula" returnType="Pelicula" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+        <Method name="getFunc" returnType="Funcion" visibility="public">
+          <Argument type="int" name="index"/>
+        </Method>
+      </Methods>
+    </Class>
+    <Class name="Funcion" package="com.cine.modelo" visibility="public" xPosition="3574.0" yPosition="3020.0">
+      <Fields>
+        <Field name="numSala" type="int" visibility="private"/>
+        <Field name="asientos" type="Asiento[]" visibility="private"/>
+        <Field name="pelicula" type="Pelicula" visibility="private"/>
+        <Field name="hora" type="int" visibility="private"/>
+        <Field name="minuto" type="int" visibility="private"/>
+        <Field name="tipoDeFuncion" type="String" visibility="private"/>
+        <Field name="precio2D" type="float" visibility="private" isStatic="true"/>
+        <Field name="precioVIP" type="float" visibility="private" isStatic="true"/>
+        <Field name="precio3D" type="float" visibility="private" isStatic="true"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="Pelicula" name="peli"/>
+          <Argument type="int" name="numSala"/>
+          <Argument type="int" name="hora"/>
+          <Argument type="int" name="minuto"/>
+          <Argument type="String" name="tipoDeFuncion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getPrecio" returnType="float" visibility="public"/>
+        <Method name="getNumSala" returnType="int" visibility="public"/>
+        <Method name="getAsientos" returnType="Asiento[]" visibility="public"/>
+        <Method name="getPelicula" returnType="Pelicula" visibility="public"/>
+        <Method name="getHora" returnType="int" visibility="public"/>
+        <Method name="getMinuto" returnType="int" visibility="public"/>
+        <Method name="getTipoDeFuncion" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Pelicula" package="com.cine.modelo" visibility="public" xPosition="2417.0" yPosition="2575.0">
+      <Fields>
+        <Field name="nombre" type="String" visibility="private"/>
+        <Field name="duracion" type="int" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public">
+          <Argument type="String" name="nombre"/>
+          <Argument type="int" name="duracion"/>
+        </Constructor>
+      </Constructors>
+      <Methods>
+        <Method name="getDuracion" returnType="int" visibility="public"/>
+        <Method name="getNombre" returnType="String" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="Sala" package="com.cine.modelo" visibility="public" xPosition="2589.0" yPosition="320.0">
+      <Fields>
+        <Field name="numero" type="int" visibility="private"/>
+        <Field name="asientos" type="Asiento[]" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods/>
+    </Class>
+    <Class name="VistaAgregarFuncion" package="com.cine.vista" visibility="public" xPosition="56.0" yPosition="50.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox3" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox4" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox5" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjComboBox1" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjComboBox2" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjComboBox3" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjComboBox4" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjComboBox5" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjLabel7" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel8" returnType="JLabel" visibility="public"/>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+        <Method name="getjButton2" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaAgregarPelicula" package="com.cine.vista" visibility="public" xPosition="592.0" yPosition="2918.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jTextField1" type="javax.swing.JTextField" visibility="private"/>
+        <Field name="jTextField2" type="javax.swing.JTextField" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+        <Method name="getjButton2" returnType="JButton" visibility="public"/>
+        <Method name="getjTextField1" returnType="JTextField" visibility="public"/>
+        <Method name="getjTextField2" returnType="JTextField" visibility="public"/>
+        <Method name="getjLabel4" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel5" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaCartelera" package="com.cine.vista" visibility="public" xPosition="3384.0" yPosition="973.0">
+      <Fields>
+        <Field name="labels" type="JLabel" visibility="public"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaEliminarFuncion" package="com.cine.vista" visibility="public" xPosition="3341.0" yPosition="544.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+        <Method name="getjButton2" returnType="JButton" visibility="public"/>
+        <Method name="getjComboBox1" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjLabel2" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaEliminarPelicula" package="com.cine.vista" visibility="public" xPosition="1487.0" yPosition="3020.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+        <Method name="getjButton2" returnType="JButton" visibility="public"/>
+        <Method name="getjComboBox1" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjLabel2" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaMenu" package="com.cine.vista" visibility="public" xPosition="934.0" yPosition="64.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton7ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+        <Method name="getjButton2" returnType="JButton" visibility="public"/>
+        <Method name="getjButton3" returnType="JButton" visibility="public"/>
+        <Method name="getjButton4" returnType="JButton" visibility="public"/>
+        <Method name="getjButton5" returnType="JButton" visibility="public"/>
+        <Method name="getjButton6" returnType="JButton" visibility="public"/>
+        <Method name="getjButton7" returnType="JButton" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaPeliculas" package="com.cine.vista" visibility="public" xPosition="1879.0" yPosition="1478.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jComboBox1" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jComboBox2" type="javax.swing.JComboBox&lt;String&gt;" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjComboBox1" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjComboBox2" returnType="JComboBox&lt;String&gt;" visibility="public"/>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+        <Method name="getjButton2" returnType="JButton" visibility="public"/>
+        <Method name="getjButton3" returnType="JButton" visibility="public"/>
+        <Method name="getjButton4" returnType="JButton" visibility="public"/>
+        <Method name="getjLabel2" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel3" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel1" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaSala" package="com.cine.vista" visibility="public" xPosition="4376.0" yPosition="50.0">
+      <Fields>
+        <Field name="botones" type="JButton" visibility="public"/>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton10" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton11" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton12" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton13" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton14" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton15" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton16" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton17" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton18" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton19" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton2" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton20" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton21" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton22" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton23" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton24" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton25" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton26" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton27" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton28" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton29" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton3" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton30" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton31" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton32" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton33" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton34" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton35" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton36" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton37" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton4" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton5" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton6" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton7" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton8" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jButton9" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel10" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel11" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel12" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel13" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel14" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel15" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel16" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel17" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel18" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel9" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton2ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton3ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton4ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton5ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton6ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton7ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton8ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton9ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton10ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton11ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton12ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton13ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton14ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton15ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton16ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton17ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton18ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton19ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton20ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton21ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton22ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton23ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton24ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton25ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton26ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton27ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton28ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton29ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton30ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton31ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton32ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton33ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton34ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="jButton35ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjButton36" returnType="JButton" visibility="public"/>
+        <Method name="getjButton37" returnType="JButton" visibility="public"/>
+        <Method name="getjLabel16" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel17" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="VistaTicket" package="com.cine.vista" visibility="public" xPosition="4387.0" yPosition="2261.0">
+      <Fields>
+        <Field name="jButton1" type="javax.swing.JButton" visibility="private"/>
+        <Field name="jLabel1" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel2" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel3" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel4" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel5" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel6" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel7" type="javax.swing.JLabel" visibility="private"/>
+        <Field name="jLabel8" type="javax.swing.JLabel" visibility="private"/>
+      </Fields>
+      <Constructors>
+        <Constructor visibility="public"/>
+      </Constructors>
+      <Methods>
+        <Method name="initComponents" returnType="// &lt;editor-fold defaultstate=&quot;collapsed&quot; desc=&quot;Generated Code&quot;&gt;//GEN-BEGIN:initComponents void" visibility="private"/>
+        <Method name="jButton1ActionPerformed" returnType="void" visibility="private">
+          <Argument type="java.awt.event.ActionEvent" name="evt"/>
+        </Method>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String" name="args"/>
+        </Method>
+        <Method name="getjButton1" returnType="JButton" visibility="public"/>
+        <Method name="getjLabel1" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel2" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel3" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel4" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel5" returnType="JLabel" visibility="public"/>
+        <Method name="getjLabel6" returnType="JLabel" visibility="public"/>
+      </Methods>
+    </Class>
+    <Class name="CineMain" package="Test" visibility="public" xPosition="2049.0" yPosition="344.0">
+      <Fields/>
+      <Constructors/>
+      <Methods>
+        <Method name="main" returnType="void" visibility="public" isStatic="true">
+          <Argument type="String[]" name="args"/>
+        </Method>
+      </Methods>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="vp" source="com.cine.control.ControlSala" target="com.cine.vista.VistaPeliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlAgregarPelicula" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlMenu" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.cine.modelo.Funcion" target="com.cine.modelo.Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlAgregarPelicula" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlVPelicula" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlEliminarPelicula" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlAgregarFuncion" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlEliminarFuncion" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vp" source="com.cine.control.ControlVPelicula" target="com.cine.vista.VistaPeliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.cine.modelo.Funcion" target="com.cine.modelo.Asiento" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlSala" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.cine.modelo.Cine" target="com.cine.modelo.Pelicula" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlEliminarFuncion" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vs" source="com.cine.control.ControlSala" target="com.cine.vista.VistaSala" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlAgregarFuncion" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vp" source="com.cine.control.ControlTicket" target="com.cine.vista.VistaPeliculas" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vs" source="com.cine.control.ControlTicket" target="com.cine.vista.VistaSala" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlTicket" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlCartelera" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vef" source="com.cine.control.ControlEliminarFuncion" target="com.cine.vista.VistaEliminarFuncion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlTicket" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vaf" source="com.cine.control.ControlAgregarFuncion" target="com.cine.vista.VistaAgregarFuncion" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vep" source="com.cine.control.ControlEliminarPelicula" target="com.cine.vista.VistaEliminarPelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlVPelicula" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vc" source="com.cine.control.ControlCartelera" target="com.cine.vista.VistaCartelera" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vt" source="com.cine.control.ControlTicket" target="com.cine.vista.VistaTicket" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="pelicula" source="com.cine.modelo.Funcion" target="com.cine.modelo.Pelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vap" source="com.cine.control.ControlAgregarPelicula" target="com.cine.vista.VistaAgregarPelicula" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlEliminarPelicula" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlSala" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="vm" source="com.cine.control.ControlCartelera" target="com.cine.vista.VistaMenu" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <HasRelation name="c" source="com.cine.control.ControlMenu" target="com.cine.modelo.Cine" type="Aggregation" sourceCardinality="1..1" targetCardinality="1..1"/>
+    <UseRelation source="com.cine.modelo.Cine" target="com.cine.modelo.Funcion" sourceCardinality="1..1" targetCardinality="1..1"/>
+  </ClassDiagramRelations>
+</ClassDiagram>
